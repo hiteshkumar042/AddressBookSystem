@@ -57,7 +57,7 @@
         public void EditContact()
         {
             DisplayContact(); //to edit the contact need to save the contact details first
-            Console.WriteLine("\nTo Edit Contact Enter  First Name\n");
+            Console.WriteLine("\nTo Edit Contact Enter First Name\n");
             string name = Console.ReadLine();
             foreach (var record in data)
             {
@@ -70,13 +70,11 @@
                     {
                         case 1:
                             Console.WriteLine("Enter the New First Name: ");
-                            record.FirstName = Console.ReadLine();
-                            DisplayContact();
+                            record.FirstName = Console.ReadLine();                           
                             break;
                         case 2:
                             Console.WriteLine("Enter the New Last Name: ");
-                            record.LastName = Console.ReadLine();
-                            DisplayContact();
+                            record.LastName = Console.ReadLine();                           
                             break;
                         case 3:
                             Console.WriteLine("Enter the New Address: ");
@@ -109,6 +107,39 @@
                 else
                 {
                     Console.WriteLine("Contact Not Found. Enter the valid name!");
+                }
+
+            }
+            Console.WriteLine("\nAfter Edit Here is the Contact Details\n");
+            foreach (var record in data.ToList())
+            {
+                Console.WriteLine("First Name : " + record.FirstName);
+                Console.WriteLine("Last Name : " + record.LastName);
+                Console.WriteLine("Address : " + record.Address);
+                Console.WriteLine("City : " + record.City);
+                Console.WriteLine("State : " + record.State);
+                Console.WriteLine("ZIP Code : " + record.ZIPCode);
+                Console.WriteLine("Phone Number : " + record.PhoneNumber);
+                Console.WriteLine("Email Id : " + record.Email);
+
+            }
+        }
+
+        public void DeleteContact()
+        {
+            DisplayContact();
+            Console.WriteLine("Enter the Firstname of the person you would like to remove.");
+            string name = Console.ReadLine();
+            foreach (var record in data.ToList())
+            {
+                if (record.FirstName.ToUpper() == name.ToUpper())
+                {
+                    data.Remove(record);
+                    Console.WriteLine("Contact is deleted");
+                }
+                else
+                {
+                    Console.WriteLine("Contact is not present");
                 }
             }
         }
