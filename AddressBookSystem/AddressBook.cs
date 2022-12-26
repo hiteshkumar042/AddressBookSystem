@@ -2,8 +2,9 @@
 {
     internal class AddressBook
     {
-        //storing in user defiened data type list
+        //Creating instance of generic List
         List<Contact> data = new List<Contact>();
+        //UC1- Create Contact
         public void CreateContacts()
         {
 
@@ -35,12 +36,13 @@
             contact.Email = Console.ReadLine();
 
             data.Add(contact); //contact added in generic list
+            Console.WriteLine("\nContact saved sucessfully...!");
 
         }
+        //UC2-Display Contacts
         public void DisplayContact()
         {
-            CreateContacts(); //before display contact details need to take user details
-            Console.WriteLine("\nHere is the contact details saved.\n");
+            Console.WriteLine("\nHere is the contact details : \n");
             foreach (Contact record in data)
             {
                 Console.WriteLine("First Name : " + record.FirstName);
@@ -53,10 +55,9 @@
                 Console.WriteLine("Email Id : " + record.Email);
             }
         }
-
+        //UC3- Edit Contact
         public void EditContact()
         {
-            DisplayContact(); //to edit the contact need to save the contact details first
             Console.WriteLine("\nTo Edit Contact Enter First Name\n");
             string name = Console.ReadLine();
             foreach (var record in data)
@@ -70,11 +71,11 @@
                     {
                         case 1:
                             Console.WriteLine("Enter the New First Name: ");
-                            record.FirstName = Console.ReadLine();                           
+                            record.FirstName = Console.ReadLine();
                             break;
                         case 2:
                             Console.WriteLine("Enter the New Last Name: ");
-                            record.LastName = Console.ReadLine();                           
+                            record.LastName = Console.ReadLine();
                             break;
                         case 3:
                             Console.WriteLine("Enter the New Address: ");
@@ -110,7 +111,6 @@
                 }
 
             }
-            Console.WriteLine("\nAfter Edit Here is the Contact Details\n");
             foreach (var record in data.ToList())
             {
                 Console.WriteLine("First Name : " + record.FirstName);
@@ -124,7 +124,7 @@
 
             }
         }
-
+        //UC4- Delete Contact
         public void DeleteContact()
         {
             DisplayContact();
