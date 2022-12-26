@@ -56,7 +56,7 @@
 
         public void EditContact()
         {
-            //DisplayContact(); //to edit the contact need to sav ethe contact details first
+            DisplayContact(); //to edit the contact need to save the contact details first
             Console.WriteLine("\nTo Edit Contact Enter  First Name\n");
             string name = Console.ReadLine();
             foreach (var record in data)
@@ -104,7 +104,6 @@
                             break;
                         case 9:
                             return;
-
                     }
                 }
                 else
@@ -114,12 +113,6 @@
             }
         }
     }
-
-
-
-
-
-
     public class Contact
     {
         public string FirstName { get; set; }
