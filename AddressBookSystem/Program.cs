@@ -8,12 +8,14 @@
             while (true)
             {
                 Console.WriteLine("===============================\nWelcome To Address Book System\n===============================");
-                Console.WriteLine("\n1. Create Contact.\n2. Display Contact.\n3. Edit Existing Contact.\n4. Delete Contact.\n");
+                Console.WriteLine("\n1. Create Contact.\n2. Display Contact.\n3. Edit Existing Contact.\n4. Delete Contact.\n5. Add Multiple Address Book");
                 int option = Convert.ToInt32(Console.ReadLine());
             
                 switch (option)
                 {
                     //UC1 - Create Contact
+                    case 1:                    
+                            addressBook.CreateContacts();
                     case 1:
                         addressBook.CreateContacts();
                         break;
@@ -28,6 +30,10 @@
                     case 4:
                         //Uc4- Delete Contact
                         addressBook.DeleteContact();
+                        break;
+                    case 5:
+                        //Uc6- Add Address Book
+                        addressBook.AddNewAddressBook();
                         break;
                     default:
                         Console.WriteLine("Choose from given option only!\n");
