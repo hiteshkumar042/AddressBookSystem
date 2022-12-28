@@ -15,6 +15,7 @@
                 {
                     //UC1 - Create Contact
 <<<<<<< HEAD
+<<<<<<< HEAD
                     case 1:
                         addressBook.CreateContacts();
 =======
@@ -22,6 +23,12 @@
                             addressBook.CreateContacts();
 
 >>>>>>> MultipleAddressBookUC6
+=======
+                    case 1:                    
+                            addressBook.CreateContacts();
+                    case 1:
+                        addressBook.CreateContacts();
+>>>>>>> 551fd27a32f1d408c94125fff507f49641017535
                         break;
                     //UC2 - Add Contact and Display
                     case 2:
