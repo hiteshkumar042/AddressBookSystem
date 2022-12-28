@@ -127,7 +127,6 @@
         //UC4- Delete Contact
         public void DeleteContact()
         {
-            DisplayContact();
             Console.WriteLine("Enter the Firstname of the person you would like to remove.");
             string name = Console.ReadLine();
             foreach (var record in data.ToList())

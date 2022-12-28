@@ -15,7 +15,13 @@
                 {
                     //UC1 - Create Contact
                     case 1:
-                        addressBook.CreateContacts();
+                        //UC5 - Add multiple Contact
+                        Console.WriteLine("How many Contact want to add ?");
+                        int howMany=Convert.ToInt32(Console.ReadLine());
+                        for (int i=1; i <= howMany; i++)
+                        {
+                            addressBook.CreateContacts();
+                        }
                         break;
                     //UC2 - Add Contact and Display
                     case 2:
