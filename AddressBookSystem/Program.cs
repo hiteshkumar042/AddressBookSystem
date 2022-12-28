@@ -14,6 +14,7 @@
                 switch (option)
                 {
                     //UC1 - Create Contact
+<<<<<<< Updated upstream
 <<<<<<< HEAD
                     case 1:
                         addressBook.CreateContacts();
@@ -22,6 +23,10 @@
                             addressBook.CreateContacts();
 
 >>>>>>> MultipleAddressBookUC6
+=======
+                    case 1:
+                        addressBook.CreateContacts();
+>>>>>>> Stashed changes
                         break;
                     //UC2 - Add Contact and Display
                     case 2:
