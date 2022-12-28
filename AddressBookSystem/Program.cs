@@ -16,7 +16,8 @@
                     //UC1 - Create Contact
                     case 1:                    
                             addressBook.CreateContacts();
-
+                    case 1:
+                        addressBook.CreateContacts();
                         break;
                     //UC2 - Add Contact and Display
                     case 2:
