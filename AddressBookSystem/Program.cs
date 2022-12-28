@@ -14,28 +14,8 @@
                 switch (option)
                 {
                     //UC1 - Create Contact
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    case 1:
-                        addressBook.CreateContacts();
-=======
-                    case 1:                    
-                            addressBook.CreateContacts();
-
->>>>>>> MultipleAddressBookUC6
-=======
-<<<<<<< HEAD
-                    case 1:                    
-                            addressBook.CreateContacts();
-                    case 1:
-                        addressBook.CreateContacts();
->>>>>>> 551fd27a32f1d408c94125fff507f49641017535
-=======
-                    case 1:
-                        addressBook.CreateContacts();
->>>>>>> Stashed changes
->>>>>>> Finalbranch
+                    case 1:                  
+                         addressBook.CreateContacts();
                         break;
                     //UC2 - Add Contact and Display
                     case 2:
